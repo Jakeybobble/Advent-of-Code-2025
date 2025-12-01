@@ -13,7 +13,7 @@ all: 1
 	$(call run_day,1,2)
 
 define run_day
-	@cc day-$(1)/$(2).c -o program.o
+	@cc day-$(1)/$(2).c common.c common.h -o program.o
 	@echo -- Running day $(1)-$(2) --
 	@./program.o
 endef
